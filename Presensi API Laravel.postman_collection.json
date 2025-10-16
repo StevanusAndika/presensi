@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "eeb1e08c-8f29-4bf1-8de0-a96c3aa5c70a",
+		"name": "Presensi API Laravel",
+		"description": "## 📋 Gambaran Umum\nAPI Presensi Laravel adalah sistem manajemen kehadiran yang mengatur jadwal standar per hari, data pengguna, dan absensi harian. Sistem ini mendukung operasi CRUD lengkap untuk tiga entitas utama: Pengguna, Peta Kehadiran, dan Presensi Harian.\n\n## 🔗 Base URL\n```\nhttp://localhost:8000/api\n```\n\n## 📊 Entitas Utama\n1. **Pengguna** - Data karyawan/staff\n2. **Peta Kehadiran** - Jadwal standar masuk & pulang per hari\n3. **Presensi Harian** - Record absensi harian karyawan\n\n## 🔐 Autentikasi\nSaat ini menggunakan noauth (tanpa autentikasi)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37665454"
+	},
+	"item": [
+		{
+			"name": "👥 PENGUNA - Tampilkan Semua Data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pengguna/list-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pengguna",
+						"list-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "👥 PENGUNA - Tambah Data Baru",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nip\": \"123456789\",\r\n    \"nama\": \"Stevanus Andika Galih Setiawan\",\r\n    \"level\": \"A\",\r\n    \"sandi\": \"Andi124443\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/pengguna/simpan-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pengguna",
+						"simpan-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "👥 PENGUNA - Ambil Data Spesifik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pengguna/ambil-data/123456784",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pengguna",
+						"ambil-data",
+						"123456784"
+					]
+				},
+				"description": "Gunakan nip untuk hit mengambil data"
+			},
+			"response": []
+		},
+		{
+			"name": "👥 PENGUNA - Hapus Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pengguna/hapus-data/123456789",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pengguna",
+						"hapus-data",
+						"123456789"
+					]
+				},
+				"description": "Gunakan nip untuk hit menghapus data"
+			},
+			"response": []
+		},
+		{
+			"name": "👥 PENGUNA - Cek Koneksi Database",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/pengguna/cek-koneksi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pengguna",
+						"cek-koneksi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "📅 PETA KEHADIRAN - Tampilkan Semua Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/peta-kehadiran/list-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peta-kehadiran",
+						"list-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "📅 PETA KEHADIRAN - Tambah Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"no_hari\": 1,\r\n    \"jam_masuk\": \"07:00:00\",\r\n    \"jam_keluar\": \"17:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/peta-kehadiran/simpan-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peta-kehadiran",
+						"simpan-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "📅 PETA KEHADIRAN - Ambil Data Spesifik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/peta-kehadiran/ambil-data/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peta-kehadiran",
+						"ambil-data",
+						"1"
+					]
+				},
+				"description": "gunakan id untuk hit api peta kehadiran"
+			},
+			"response": []
+		},
+		{
+			"name": "📅 PETA KEHADIRAN - Hapus Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/peta-kehadiran/hapus-data/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"peta-kehadiran",
+						"hapus-data",
+						"1"
+					]
+				},
+				"description": "gunakan id untuk hit api peta kehadiran"
+			},
+			"response": []
+		},
+		{
+			"name": "✅ PRESENSI HARIAN - Cek Koneksi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/presensi-harian/cek-koneksi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"presensi-harian",
+						"cek-koneksi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "✅ PRESENSI HARIAN - Ambil Semua Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/presensi-harian/list-data/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"presensi-harian",
+						"list-data",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PRESENSI HARIAN -Simpan Data Absensi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tgl_masuk\": \"2024-01-16 08:05:00\",\r\n    \"tgl_pulang\": \"2024-01-16 17:10:00\",\r\n    \"ket_hari\": \"H\",\r\n    \"nip\": \"123456789\",\r\n    \"ip_masuk\": \"192.168.1.101\",\r\n    \"ip_keluar\": \"192.168.1.101\",\r\n    \"peta_kehadiran_id\": 1,\r\n    \"jam_harus_masuk\": \"08:00:00\",\r\n    \"jam_harus_pulang\": \"17:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/presensi-harian/simpan-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"presensi-harian",
+						"simpan-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "✅ PRESENSI HARIAN - Hapus Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/presensi-harian/hapus-data/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"presensi-harian",
+						"hapus-data",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -133,16 +133,6 @@ Proyek ini menyertakan dokumentasi interaktif yang dapat diakses melalui browser
    - 📋 Copy-paste contoh kode
    - 🔍 Format JSON response yang rapi
 
-### Screenshot Fitur
-
-#### 🏠 Halaman Utama
-![Hero Section](https://via.placeholder.com/800x400/667eea/ffffff?text=API+Presensi+Laravel)
-
-#### 📊 Panel Testing
-![Testing Panel](https://via.placeholder.com/800x400/764ba2/ffffff?text=Interactive+Testing)
-
-#### 🌙 Dark Mode
-![Dark Mode](https://via.placeholder.com/800x400/1e293b/ffffff?text=Dark+Mode+Supported)
 
 ## 🗃️ Struktur Database
 
@@ -303,7 +293,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🆕 Changelog
 
-### v1.0.0 (2024-01-16)
+### v1.0.0 (2025-10-16)
 - ✅ Initial release
 - ✅ CRUD operations for all entities
 - ✅ Interactive documentation
@@ -314,7 +304,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jika Anda mengalami masalah atau memiliki pertanyaan:
 
-1. 📧 Email: support@example.com
+1. 📧 Email: stevcomp58@gmail.com
 2. 🐛 Issues: [GitHub Issues](https://github.com/StevanusAndika)
 3. 💬 Discussion: [GitHub Discussions](https://github.com/StevanusAndika)
 
